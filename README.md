@@ -27,12 +27,12 @@ Finally, [Vimwiki][] should be installed if it is not already.
 At a minimum, the `vimwiki` plugin must be configured with the wiki instance
 location by adding the following to your `.vimrc`:
 
-    let g:vimwiki_list = [{'path': '~/.vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+    let g:vimwiki_list = [{'path': '~/.vimwiki', 'syntax': 'markdown', 'ext': '.md', 'link_ext': 1, }]
 
 If multiple instances are installed, they must be added to this list as well:
 
-    let g:vimwiki_list = [{'path': '~/.vimwiki-home', 'syntax': 'markdown', 'ext': '.md'}
-                       \  {'path': '~/.vimwiki-work', 'syntax': 'markdown', 'ext': '.md'}]
+    let g:vimwiki_list = [{'path': '~/.vimwiki-home', 'syntax': 'markdown', 'ext': '.md', 'link_ext': 1}
+                       \  {'path': '~/.vimwiki-work', 'syntax': 'markdown', 'ext': '.md', 'link_ext': 1}]
 
 It is advised to disable global extension support to avoid having all Markdown
 files treated as if they were part of the wiki by adding the following to your
