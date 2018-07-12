@@ -27,12 +27,12 @@ Finally, [Vimwiki][] should be installed if it is not already.
 At a minimum, the `vimwiki` plugin must be configured with the wiki instance
 location by adding the following to your `.vimrc`:
 
-    let g:vimwiki_list = [{'path': '~/.vimwiki', 'syntax': 'markdown', 'ext': '.md', 'link_ext': 1, }]
+    let g:vimwiki_list = [{'path': '~/.vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
 
 If multiple instances are installed, they must be added to this list as well:
 
-    let g:vimwiki_list = [{'path': '~/.vimwiki-home', 'syntax': 'markdown', 'ext': '.md', 'link_ext': 1}
-                       \  {'path': '~/.vimwiki-work', 'syntax': 'markdown', 'ext': '.md', 'link_ext': 1}]
+    let g:vimwiki_list = [{'path': '~/.vimwiki-home', 'syntax': 'markdown', 'ext': '.md'}]
+                       \  {'path': '~/.vimwiki-work', 'syntax': 'markdown', 'ext': '.md'}]
 
 It is advised to disable global extension support to avoid having all Markdown
 files treated as if they were part of the wiki by adding the following to your
@@ -41,6 +41,16 @@ files treated as if they were part of the wiki by adding the following to your
     let g:vimwiki_global_ext = 0
 
 For more detail, see: `:help g:vimwiki_global_ext`.
+
+## Compatibility
+
+By default, Vimwiki does not add a file extension to generated wiki links, which
+is incompatible with MDwiki. PR [#529](https://github.com/vimwiki/vimwiki/pull/529)
+addresses this issue by adding a new option `g:vimwiki_markdown_link_ext` to
+include the file extension. To correct this issue, add the following to your
+`.vimrc`:
+
+    let g:vimwiki_markdown_link_ext = 1
 
 ## External Wikis
 
