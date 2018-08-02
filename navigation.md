@@ -1,2 +1,3 @@
-[Home](index.md)
+# Vimwiki
+
 [Diary](diary/diary.md)
