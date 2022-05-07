@@ -1,4 +1,4 @@
 #!/bin/sh
-# serve.sh [port] - simple HTTP server for serving HTML content
+# serve.sh [port] - HTTP server for serving HTML content
 
-exec python2 -m SimpleHTTPServer ${1:-8080}
+exec python3 -m http.server ${1:-8080}
