@@ -26,7 +26,7 @@ if [ -e $link_name -a ! -h $link_name ]; then
 	echo "Skipping $link_name; not a symbolic link"
 else
 	echo "Installing $link_name..."
-	ln -fs -T $PWD $link_name
+	ln -fns $PWD $link_name
 fi
 
 echo "Done."
